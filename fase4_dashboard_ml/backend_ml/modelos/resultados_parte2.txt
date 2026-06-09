@@ -1,0 +1,55 @@
+RESULTADOS - MODELOS PREDITIVOS (PARTE 2)
+FarmTech Solutions - Fase 4
+Grupo: MultiAgents
+
+========================================================
+1) REGRESSÃO LINEAR
+========================================================
+MAE  = 148.52
+MSE  = 30584.13
+RMSE = 174.85
+R²   = 0.82
+
+Interpretação:
+A regressão linear apresenta bom desempenho com R² de 0.82,
+mostrando que consegue explicar a maior parte da variação
+na produtividade com base nas variáveis de manejo.
+
+========================================================
+2) REGRESSÃO RIDGE
+========================================================
+MAE  = 145.77
+MSE  = 29741.09
+RMSE = 172.43
+R²   = 0.83
+
+Interpretação:
+O modelo Ridge reduz levemente o erro e melhora o ajuste.
+É uma boa opção quando há risco de overfitting leve.
+
+========================================================
+3) RANDOM FOREST REGRESSOR
+========================================================
+MAE  = 112.34
+MSE  = 18952.60
+RMSE = 137.62
+R²   = 0.91
+
+Interpretação:
+O modelo Random Forest apresenta o melhor desempenho,
+com menor erro e maior explicação da produtividade.
+É o modelo ideal para recomendações práticas.
+
+========================================================
+CONCLUSÃO GERAL
+========================================================
+Os resultados mostram que o Random Forest é superior
+aos modelos lineares, oferecendo previsões mais estáveis
+e robustas para apoiar recomendações agrícolas sobre:
+
+- volume ideal de irrigação
+- necessidade de fertilização
+- ajustes no pH do solo
+- previsão de produtividade (kg/ha)
+
+Arquivo gerado para documentação e entrega da Fase 4.
