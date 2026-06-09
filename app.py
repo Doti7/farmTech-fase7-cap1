@@ -199,7 +199,23 @@ with tab5:
     else:
         st.success("Nenhum alerta crítico identificado.")
 
-    st.info("Na próxima etapa vamos criar o módulo real de envio via AWS SNS.")
+    from fase5_aws_alertas.sns_alert import avaliar_alertas, gerar_mensagem_alerta, simular_envio_sns
+
+alertas_gerados = avaliar_alertas(
+    umidade=umidade_alerta,
+    ph=ph_alerta,
+)
+
+mensagem_alerta = gerar_mensagem_alerta(alertas_gerados)
+
+st.subheader("Mensagem de alerta")
+
+st.code(mensagem_alerta)
+
+if st.button("Simular envio de alerta via AWS SNS"):
+    resultado = simular_envio_sns(mensagem_alerta)
+    st.success("Alerta simulado com sucesso via Amazon SNS.")
+    st.json(resultado)
 
 
 with tab6:
