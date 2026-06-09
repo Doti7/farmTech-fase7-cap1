@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "author": "Bernardo Avelar",
+  "commit": "custom",
+  "parts": [
+    {"id": "esp", "type": "wokwi-esp32-devkit-v1", "top": 0, "left": 0, "rotate": 0},
+    {"id": "btnN", "type": "wokwi-pushbutton", "top": -50, "left": 200, "rotate": 0, "attrs": {"color": "green"}},
+    {"id": "btnP", "type": "wokwi-pushbutton", "top": 0, "left": 200, "rotate": 0, "attrs": {"color": "green"}},
+    {"id": "btnK", "type": "wokwi-pushbutton", "top": 50, "left": 200, "rotate": 0, "attrs": {"color": "green"}},
+    {"id": "ldr",  "type": "wokwi-photoresistor", "top": 100, "left": 200, "rotate": 0},
+    {"id": "dht",  "type": "wokwi-dht22", "top": 160, "left": 200, "rotate": 0},
+    {"id": "pump", "type": "wokwi-led", "top": 220, "left": 200, "rotate": 0, "attrs": {"color": "blue"}}
+  ],
+  "connections": [
+    ["btnN:1", "esp:15", "green", []],
+    ["btnN:2", "esp:GND", "black", []],
+    ["btnP:1", "esp:2",  "green", []],
+    ["btnP:2", "esp:GND", "black", []],
+    ["btnK:1", "esp:13", "green", []],
+    ["btnK:2", "esp:GND", "black", []],
+    ["ldr:OUT", "esp:35", "yellow", []],
+    ["ldr:VCC", "esp:3V3", "red", []],
+    ["ldr:GND", "esp:GND", "black", []],
+    ["dht:DATA", "esp:21", "yellow", []],
+    ["dht:VCC",  "esp:3V3", "red", []],
+    ["dht:GND",  "esp:GND", "black", []],
+    ["pump:A",   "esp:27", "blue", []],
+    ["pump:K",   "esp:GND", "black", []]
+  ]
+}
