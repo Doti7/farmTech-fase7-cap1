@@ -369,7 +369,7 @@ Inserir print dos resultados YOLO e CNN.
 Link do vídeo no YouTube (não listado):
 
 ```text
-INSERIR LINK DO YOUTUBE
+https://youtu.be/8yRllN6v7JM
 ```
 
 ---
